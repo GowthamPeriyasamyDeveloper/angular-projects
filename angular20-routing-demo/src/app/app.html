@@ -1,0 +1,12 @@
+<h1>Angular 20 Routing Demo</h1>
+
+<nav>
+  <a routerLink="" routerLinkActive ="active"  [routerLinkActiveOptions]="{exact : true}">Home</a> |
+  <a routerLink="about" [routerLinkActive]="['active']">About</a> |
+  <a routerLink="contact" [routerLinkActive]="['active']">Contact</a>
+</nav>
+
+<hr>
+
+<!-- Routed views appear here -->
+<router-outlet></router-outlet>
