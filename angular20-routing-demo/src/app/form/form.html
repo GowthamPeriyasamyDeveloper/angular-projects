@@ -5,3 +5,40 @@
 <input type="text" #userInput>
 
 <button (click)="logValue(userInput.value)">submit</button>
+
+<hr>
+<h2>Event Binding with $event</h2>
+
+<input type="text" (input)="onInput($event)">
+
+<button (click) = "onSubmitEvent()">Submit</button>
+
+
+<hr>
+<h2>Two way data binding [(ngModel)]</h2>
+<input type="text" [(ngModel)]="userName">
+<button (click)="onSubmitNgModel()">Submit</button>
+
+<hr>
+<h2>Reactive Forms - Form Control</h2>
+<input type="text" [formControl]="nameControl">
+<button (click) = "onSubmitFormControl()">Submit</button>
+
+<hr>
+
+<h2>Reactive Forms - FormGroup</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmitFormGroup()">
+  <input type="text" formControlName="name">
+  <button type="submit">Submit</button>
+</form>
+
+<h2>View Child</h2>
+<input type="text" #viewChildInput>
+<button type="submit"  (click)="onSubmitViewChild()">Submit</button>
+
+<hr>
+
+<h2>Special event (keyup.enter)</h2>
+
+<input type="text" (keyup.enter)="onSubmitEnter($event)" placeholder="press enter">
+
