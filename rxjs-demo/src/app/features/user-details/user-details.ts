@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {User} from '../model/User';
-import {UserService} from '../service/user-service';
+import {User} from '../../model/User';
+import {UserService} from '../../service/user-service';
 import {NgForOf} from '@angular/common';
 
 @Component({

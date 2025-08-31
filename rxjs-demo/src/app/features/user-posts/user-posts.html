@@ -1,0 +1,37 @@
+<h2>Parallel Fetching (mergeMap)</h2>
+<ul>
+  <li *ngFor="let posts of parallelPosts$ | async">
+    {{posts | json }}
+  </li>
+</ul>
+
+<hr>
+
+<h2>Sequential Fetching (concatMap)</h2>
+<ul>
+  <li *ngFor="let posts of sequentialPosts$ | async">
+    {{ posts | json }}
+  </li>
+</ul>
+
+<hr>
+<h2>User Data with Posts & Todos (forkJoin)</h2>
+
+<div *ngIf="userData$ | async as data">
+
+  <h3>User</h3>
+
+  <pre>{{ data.user | json }}</pre>
+
+  <h3>Posts</h3>
+  <ul>
+    <li *ngFor="let post of data.posts">{{ post.title }}</li>
+  </ul>
+
+  <h3>Todos</h3>
+  <ul>
+    <li *ngFor="let todo of data.todos">{{ todo.title }} ({{ todo.completed ? '✅' : '❌' }})</li>
+  </ul>
+</div>
+
+
