@@ -1,0 +1,15 @@
+.widget
+{
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 5px;
+  width: 200px;
+  height: 220px;
+  overflow-y: auto;
+}
+
+button
+{
+  margin-bottom: 8px;
+}
