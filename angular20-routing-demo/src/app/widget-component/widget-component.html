@@ -1,0 +1,7 @@
+<div class="widget">
+<h4>{{title}}</h4>
+  <button (click)="refresh()">Refresh Widget</button>
+  <ul>
+    <li *ngFor="let ele of data">{{ele}}</li>
+  </ul>
+</div>

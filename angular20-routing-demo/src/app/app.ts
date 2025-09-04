@@ -5,10 +5,11 @@ import {filter, from, fromEvent, interval, map, take, tap} from 'rxjs';
 import {NgIf} from '@angular/common';
 import {ViewChildExampleComponent} from './view-child-example-component/view-child-example-component';
 import {ParentComponent} from './parent-component/parent-component';
+import {DashboardComponent} from './dashboard-component/dashboard-component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, Form, NgIf, ViewChildExampleComponent, ParentComponent],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, Form, NgIf, ViewChildExampleComponent, ParentComponent, DashboardComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
