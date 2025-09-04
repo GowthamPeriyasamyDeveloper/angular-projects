@@ -2,16 +2,21 @@ import {Component, OnInit, signal} from '@angular/core';
 import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {Form} from './form/form';
 import {filter, from, fromEvent, interval, map, take, tap} from 'rxjs';
+import {NgIf} from '@angular/common';
+import {ViewChildExampleComponent} from './view-child-example-component/view-child-example-component';
+import {ParentComponent} from './parent-component/parent-component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, Form],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, Form, NgIf, ViewChildExampleComponent, ParentComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App implements OnInit
 {
   protected readonly title = signal('angular20-routing-demo');
+
+  disableFormComponent:boolean=false;
 
   ngOnInit(): void
   {
