@@ -1,0 +1,25 @@
+<div *ngIf="isLoggedIn; else guest">
+  <p>Welcome back, user! 🎉</p>
+</div>
+
+<ng-template #guest>
+  <p>Please log in  to continue</p>
+</ng-template>
+
+<ng-template #message let-surname="firstName" >
+  <p>Hello, {{ surname }} 👋</p>
+</ng-template>
+
+
+<ng-container *ngTemplateOutlet="message; context:{firstName:'Alice'}"></ng-container>
+<ng-container *ngTemplateOutlet="message; context:{firstName:'Bob'}"></ng-container>
+
+<button (click)="show = !show">Submit</button>
+
+<div *ngIf="show; else hiddenBlock">
+  <p>Content is visible ✅</p>
+</div>
+
+<ng-template #hiddenBlock>
+  <p>Content is hidden ❌</p>
+</ng-template>
