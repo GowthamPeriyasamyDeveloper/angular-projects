@@ -7,10 +7,11 @@ import {ViewChildExampleComponent} from './view-child-example-component/view-chi
 import {ParentComponent} from './parent-component/parent-component';
 import {DashboardComponent} from './dashboard-component/dashboard-component';
 import {NgTemplateExampleComponent} from './ng-template-example-component/ng-template-example-component';
+import {CardComponent} from './card-component/card-component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, Form, NgIf, ViewChildExampleComponent, ParentComponent, DashboardComponent, NgTemplateExampleComponent],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, Form, NgIf, ViewChildExampleComponent, ParentComponent, DashboardComponent, NgTemplateExampleComponent, CardComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
