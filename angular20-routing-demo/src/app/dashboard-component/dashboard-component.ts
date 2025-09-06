@@ -13,6 +13,6 @@ export class DashboardComponent {
 
   refreshAll()
   {
-        this.widgets.forEach(widget => widget.refresh());
+    this.widgets.forEach(widget => widget.refresh());
   }
 }
